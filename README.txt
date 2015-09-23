@@ -1,0 +1,1 @@
+Comprobar si se actualiza con el usuario desconectado de la web.
