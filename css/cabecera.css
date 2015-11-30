@@ -1,0 +1,182 @@
+/*Se le aplicará el ancho, alto y estilo de letra, a las etiquetas: html, body e img que contenga el identificador cabecera respectivamente.*/
+html, body, #cabecera img {
+	height: 100%;
+	width: 100%;
+	font-family: andalus;
+}
+
+body {
+	margin: 0px;
+}
+
+#cabecera, #menu {
+	width: auto;
+	background-color: rgba(240,240,240,1);
+}
+
+#cabecera {
+	height: 18%;
+}
+
+/*Se le palicará un alto, un margen arriba y un color degradado, a la etiqueta con identificador menu*/
+#menu {
+	height: 7%;
+	margin-top: 1%;
+	/*Para safari 5.1 a 6.0*/
+	background: -webkit-linear-gradient(to top, rgba(127,127,127,1) 0%, rgba(127,127,127,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 100%);
+	/*Para opera 11.1 a 12.0*/
+	background: -o-linear-gradient(to top, rgba(127,127,127,1) 0%, rgba(127,127,127,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 100%);
+	/*Para firefox 3.6 a 15*/
+	background: -moz-linear-gradient(to top, rgba(127,127,127,1) 0%, rgba(127,127,127,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 100%);
+	/*Sintaxis estandar*/
+	background: linear-gradient(to top, rgba(127,127,127,1) 0%, rgba(127,127,127,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 100%);
+}
+
+#menu ul, #menu li, #menu a {
+	height: 100%;
+}
+
+/*Se le quita el tipo de estilo de una lista, los margenes y los espacios, a la etiquetas ul que contenga el idenficador menu*/
+#menu ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+/*Cada elemento de una lista, se mostrará en la misma linea con un color degradado y a la izquierda de la pantalla; esto se aplicará a las listas que contenga 
+  el identificador menu*/
+#menu li {
+	display: inline-block;
+	/*Para safari 5.1 a 6.0*/
+	background: -webkit-linear-gradient(to top, rgba(34,113,170,1) 0%, rgba(34,113,170,1) 50%, rgba(89,168,224,1) 51%, rgba(89,168,224,1) 100%);
+	/*Para opera 11.1 a 12.0*/
+	background: -o-linear-gradient(to top, rgba(34,113,170,1) 0%, rgba(34,113,170,1) 50%, rgba(89,168,224,1) 51%, rgba(89,168,224,1) 100%);
+	/*Para firefox 3.6 a 15*/
+	background: -moz-linear-gradient(to top, rgba(34,113,170,1) 0%, rgba(34,113,170,1) 50%, rgba(89,168,224,1) 51%, rgba(89,168,224,1) 100%);
+	/*Sintaxis estandar*/
+	background: linear-gradient(to top, rgba(34,113,170,1) 0%, rgba(34,113,170,1) 50%, rgba(89,168,224,1) 51%, rgba(89,168,224,1) 100%);
+	float: left;
+}
+
+/*Al primer elemento de una lista se redondea su borde y deja un margen a la izquierda; esto se aplicará a las listas que contenga el identificador menu*/
+#menu li:first-child {
+	-webkit-border-radius: 100px 0px 0px; /*Para chrome 4.0 a 5.0 y safari 3.1 a 5.0*/
+	-moz-border-radius: 100px 0px 0px; /*Para firefox 3.0 a 4.0*/
+	border-radius: 100px 0px 0px; /*Sintaxis estandar*/
+	margin-left: 1%;
+}
+
+/*Al último elemento de una lista se redondea su borde; esto se aplicará a las listas que contenga el identificador menu*/
+#menu li:last-child {
+	-webkit-border-radius: 0px 100px 0px 0px; /*Para chrome 4.0 a 5.0 y safari 3.1 a 5.0*/
+	-moz-border-radius: 0px 100px 0px 0px; /*Para firefox 3.0 a 4.0*/
+	border-radius: 0px 100px 0px 0px; /*Sintaxis estandar*/
+}
+
+/*A los elementos de un lista que son activados o se les coloca el ratón, se les elimina el fondo y realiza una animacion; esto se aplicará a las listas
+  que contenga el identificador menu*/
+#menu li:hover, #menu li:active {
+	background: none;
+	/*Para chrome 4.0 a 43.0, safari 4.0 a 9.0 y opera 15.0 a 30.0*/
+	-webkit-animation-name: cambia_fondo;
+	-webkit-animation-duration: 0.75s;
+	/*Para firefox 5.0 a 16.0*/
+	-moz-animation-name: cambia_fondo;
+	-moz-animation-duration: 0.75s;
+	/*Sintaxis estandar*/
+	animation-name: cambia_fondo;
+	animation-duration: 0.75s;
+}
+
+/*Es una animacion que cambia el color de fondo de la etiqueta que la llamó*/
+/*Para chrome 4.0 a 43.0, safari 4.0 a 9.0 y opera 15.0 a 30.0*/
+@-webkit-keyframes cambia_fondo {
+	0% {background-color: rgb(89,168,224);}
+	100% {background-color: white;}
+}
+/*Para firefox 5.0 a 16.0*/
+@-moz-keyframes cambia_fondo {
+	0% {background-color: rgb(89,168,224);}
+	100% {background-color: white;}
+}
+/*Sintaxis estandar*/
+@keyframes cambia_fondo {
+	0% {background-color: rgb(89,168,224);}
+	100% {background-color: white;}
+}
+
+/*Se le aplicará a la etiqueta <a> que contenga el identificador menu: un tamaño y color de letra, se le quitará la decoración, dejará un espacion 
+  a la izquierda y derecha, y será mostrado en forma de bloque*/
+#menu a {
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: block;
+}
+
+/*A los elementos de un enlace que son activados o se les coloca el ratón, se les cambia el color del texto y realiza una animacion;
+  esto se aplicará a los enlaces que contenga el identificador menu*/
+#menu a:hover, #menu a:active {
+	color: black;
+	/*Para chrome 4.0 a 43.0, safari 4.0 a 9.0 y opera 15.0 a 30.0*/
+	-webkit-animation-name: cambia_letras;
+	-webkit-animation-duration: 1s;
+	/*Para firefox 5.0 a 16.0*/
+	-moz-animation-name: cambia_letras;
+	-moz-animation-duration: 1s;
+	/*Sintaxis estandar*/
+	animation-name: cambia_letras;
+	animation-duration: 1s;
+}
+
+/*Es una animacion que cambia el color del texto de la etiqueta que la llamó*/
+/*Para chrome 4.0 a 43.0, safari 4.0 a 9.0 y opera 15.0 a 30.0*/
+@-webkit-keyframes cambia_letras {
+	0% {color: white;}
+	50% {color: grey;}
+	100% {color: black;}
+}
+/*Para firefox 5.0 a 16.0*/
+@-moz-keyframes cambia_letras {
+	0% {color: white;}
+	50% {color: grey;}
+	100% {color: black;}
+}
+/*Sintaxis estandar*/
+@keyframes cambia_letras {
+	0% {color: white;}
+	50% {color: grey;}
+	100% {color: black;}
+}
+
+/*A las etiquetas img y span, que contenga un elemento de una lista dentro del identificador menu, se le aplicara un ancho, alto y un margen derecho, que
+  se mostrará en la misma linea*/
+#menu li img{
+	width: auto;
+	height: 40%;
+	margin-right: 10px;
+	display: inline-block;
+}
+
+/*Cuando el tamaño máximo de la ventana del navegador es 550px, se modifica los valores del identificador menu y los enlaces de este mismo identificador*/
+@media screen and (max-width: 550px) {
+	#menu a {
+		font-size: 15px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	#menu {height: 5%;}
+}
+
+@media screen and (max-width: 410px) {
+	#menu a {
+		font-size: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	#menu {height: 4%;}
+}
